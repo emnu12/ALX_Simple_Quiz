@@ -14,9 +14,12 @@ function checkAnswer() {
   if (userAnswer === correctAnswer) {
     feedback.textContent = "Correct! Well done.";
   } else {
-    feedback.textContent = "Incorrect. Try again.";
+    feedback.textContent = "That's incorrect. Try again!";
   }
 }
 
-document.getElementById("submit-answer").addEventListener("click", checkAnswer);
+// Retrieve the submit button
+const submitButton = document.getElementById("submit-answer");
 
+// Add event listener to the button
+submitButton.addEventListener("click", checkAnswer);
